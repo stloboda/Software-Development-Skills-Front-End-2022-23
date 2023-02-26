@@ -1,0 +1,14 @@
+{
+  "name": "portfoilio",
+  "version": "1.0.0",
+  "description": "It is my study project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Stanislav Loboda",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
