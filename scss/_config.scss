@@ -2,6 +2,7 @@ $primary-color: #444;
 $primary-font-family: "Open Sans", sans-serif;
 $second-font-family: "JetBrains Mono", monospace;
 $text-color: #24802d;
+$opacity-color: rgba(38, 38, 34, 0.5);
 $secondary-text-color: #2dbb1c;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
@@ -29,5 +30,29 @@ $background-opasity: 0.4;
         background: rgba($primary-color, $background-opasity);
       }
     }
+  }
+}
+
+@mixin Sm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin Md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin Lg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin Xl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }
