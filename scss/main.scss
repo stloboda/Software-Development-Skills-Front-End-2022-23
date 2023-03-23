@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "responsive";
 
 * {
   box-sizing: border-box;
@@ -10,7 +9,10 @@
 
 body {
   @include background();
-  height: 100%;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
   background: $primary-color;
   color: $text-color;
   font-family: $primary-font-family;
@@ -52,7 +54,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -74,3 +76,116 @@ main {
     }
   }
 }
+
+//About Page
+
+.about-info {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-areas:
+    "bioimage bio bio bio bio"
+    "titleskills titleskills titleskills titleskills titleskills"
+    "skill1 skill2 skill3 skill4 skill5";
+  grid-template-columns: repeat(5, 1fr);
+  padding-top: 10vh;
+}
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: solid 5px $text-color;
+}
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.title-skills {
+  grid-area: titleskills;
+  text-align: center;
+
+  h2 {
+    font-size: 60px;
+    font-weight: bold;
+  }
+}
+
+.skill1 {
+  grid-area: skill1;
+}
+
+.skill2 {
+  grid-area: skill2;
+}
+.skill3 {
+  grid-area: skill3;
+}
+.skill4 {
+  grid-area: skill4;
+}
+.skill5 {
+  grid-area: skill5;
+}
+
+.skills {
+  margin: 10vh auto;
+
+  .skills-image {
+    height: 80px;
+  }
+}
+
+#main-footer {
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+//Works Page
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 10vh;
+
+  .item {
+    width: 70%;
+  }
+
+  img {
+    width: 100%;
+
+    &:hover {
+      opacity: 0.5;
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $text-color;
+    color: set-text-color ($secondary-text-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($color: $primary-color, $amount: 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($color: $primary-color, $amount: 50);
+  color: #333;
+}
+
+@import "responsive";

@@ -1,3 +1,15 @@
+@include Xl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include Lg {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @include Md {
   main {
     align-items: center;
@@ -29,10 +41,39 @@
       height: 200px;
     }
   }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "titleskills"
+      "skill1"
+      "skill2"
+      "skill3"
+      "skill4"
+      "skill5";
+    grid-template-columns: 1fr;
+  }
+
+  .skills {
+    margin: auto;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @include Sm {
   main#home h1 {
     margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+
+    .item {
+      width: 100%;
+    }
   }
 }
