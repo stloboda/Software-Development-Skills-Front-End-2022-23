@@ -62,6 +62,33 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .boxes {
+    display: grid;
+    grid-gap: 10vh;
+    grid-template-areas:
+      "personal"
+      "social"
+      "myworks";
+
+    grid-template-columns: 1fr;
+  }
+
+  .personal {
+    grid-area: personal;
+  }
+
+  .social {
+    grid-area: social;
+
+    ul {
+      justify-content: center;
+    }
+  }
+
+  .myworks {
+    grid-area: myworks;
+  }
 }
 
 @include Sm {

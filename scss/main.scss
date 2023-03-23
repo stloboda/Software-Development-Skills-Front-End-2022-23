@@ -15,7 +15,7 @@ body {
   margin: 0;
   background: $primary-color;
   color: $text-color;
-  font-family: $primary-font-family;
+  font-family: $second-font-family;
   line-height: 1.5;
 }
 
@@ -186,6 +186,51 @@ main {
   @extend .btn;
   background: lighten($color: $primary-color, $amount: 50);
   color: #333;
+}
+
+//Contact Page
+
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20vh;
+
+  h3 {
+    font-size: 25px;
+    padding-bottom: 1rem;
+  }
+
+  span {
+    color: $secondary-text-color;
+  }
+
+  .social {
+    ul {
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+      padding: 0 20px;
+    }
+
+    a:hover {
+      color: $secondary-text-color;
+      @include easeOut();
+    }
+  }
+
+  .personal {
+    li {
+      list-style: none;
+    }
+  }
+
+  .myworks {
+    .link-projects {
+      color: $secondary-text-color;
+    }
+  }
 }
 
 @import "responsive";
