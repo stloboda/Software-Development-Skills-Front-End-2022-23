@@ -289,11 +289,14 @@ main {
     height: 25vh;
     transform: translate3d(0, -100%, 0); }
     .menu-photo .portrait {
-      width: 200px;
-      height: 200px; }
+      width: 170px;
+      height: 170px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "titleskills" "skill1" "skill2" "skill3" "skill4" "skill5";
     grid-template-columns: 1fr; }
+  .bio-image {
+    width: 280px;
+    height: 260px; }
   .skills {
     margin: auto; }
   .projects {
@@ -318,4 +321,6 @@ main {
   .projects {
     grid-template-columns: 1fr; }
     .projects .item {
-      width: 100%; } }
+      width: 100%; }
+  .boxes {
+    grid-template-columns: 1fr; } }
